@@ -1,0 +1,13 @@
+.discoverBtn {
+    box-shadow: 0 0 50px #ff0057;
+}
+
+.imgblur{
+    background-color: white;
+}
+
+.gradiantText {
+    background-image: linear-gradient(0deg, #ffc145, #fe869f 30%, #ef7ac8 45%, #a083ed 70%, #43aeff 85%);
+    background-clip: text;
+    color: transparent;
+}
