@@ -1,10 +1,31 @@
+"use client"
+
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { motion } from 'framer-motion';
 
 export default function NavBar() {
+
+  const navVariants = {
+    hidden: {
+      y: -50,
+      opacity: 0,
+    },
+    visible: {
+      y: 0, 
+      opacity: 1,
+    },
+  };
+
   return (
-    <header className='flex flex-col'>
+    <motion.header 
+      className='flex flex-col'
+      variants={navVariants}
+      initial="hidden"
+      animate="visible"
+      transition={{duration: 1, ease: "easeOut", type: 'spring', bounce: 0.35}}
+    >
         <nav className='px-60'>
             <ul className='flex justify-between items-center'>
                 <li>
@@ -78,6 +99,6 @@ export default function NavBar() {
           <h1 className='font-bold'>HomePod mini</h1>
           <button className='bg-[#0071e3] rounded-full text-white px-2'>Buy</button>
         </div>
-    </header>
+    </motion.header>
   )
 }
